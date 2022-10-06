@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <title>Titre de la page qui s'affiche dans le navigateur</title>
+  </head>
+  <body onload = "fct_fetch_onload()"> 
+
+    <!-- DEBUT MODAL************************************************************************************** -->
+    <div class="modal-container">
+      <div class="overlay modal-trigger"></div>
+      
+      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+        <button aria-label="close modal" class="close-modal modal-trigger">FERMETURE DE LA FENETRE</button>
+
+        <h1 id="modalTitle"> modalTitle</h1>
+        
+        <p id="dialogDesc"></p> 
+
+        <p id="id_mod_titre"></p>
+        <p id= "id_mod_img"> id-mod_img fenetre</p><br>
+        
+        <div id = "id_m_genre_0"> 
+        <p> Genre du film : </p> 
+        <p id = "id_m_genre"> id_mod_genre</p>
+        </div>
+        
+        <div id = "id_m_date_0"> 
+        <p> Date de sortie   :</p> 
+        <p id = "id_m_date"> id_mod_date</p>
+        </div>
+
+        <div id = "id_m_Rated_0"> 
+        <p> Evaluation : </p> 
+        <p id = "id_m_Rated"> id_Rated</p>
+        </div>
+
+        <div id = "id_m_score_imdb_0"> 
+        <p> Score Imdb : </p> 
+        <p id = "id_m_score_imdb"> id_score_imdb </p>
+        </div>
+        
+        <div id = "id_m_realisateur_0"> 
+        <p> Réalisateur  : </p> 
+        <p id = "id_m_realisateur"> id_realisateur</p>
+        </div>
+
+        <div id = "id_m_acteurs_0"> 
+        <p> Acteurs: </p> 
+        <p id = "id_m_acteurs"></p>
+        </div>
+
+        <div id = "id_m_duree_0"> 
+        <p> Durée du film : </p> 
+        <p id = "id_m_duree"> id_m_duree</p>
+        <p> Min : </p>
+        </div>
+
+        <div id = "id_m_pays_0"> 
+        <p> Pays :  : </p> 
+        <p id = "id_m_pays"> id_m_pays</p><br>
+        </div>
+
+        <div id = "id_m_box_office_0"> 
+        <p> Box office : </p> 
+        <p id = "id_m_box_office"> id_m_box_office</p><br>
+        </div>
+        <div id = "id_m_description_0"> 
+        <p> Description : </p> 
+        <p id = "id_m_description"> id_m_description</p><br>
+        </div>
+      </div>
+    </div>
+    <!-- <button class="modal-btn modal-trigger">Open Modal</button> -->
+    <!-- FIN MODAL **************************************************************************************** -->
+ 
+    <!-- Placez ici le contenu de page -->
+    
+
+<!-- DEBUT TEST -->
+    <div id="id_img_logo">
+    <!--  <a id=id_img_click_logo1 href="images/logo_justStreamIt.png"><img id=id_img_click_logo2 src="images/logo_justStreamIt.png" alt="logo du site" /></a>  -->
+      <p id=id_img_click_logo1> <img src="images/logo_justStreamIt.png" alt="logo du site" /> </p>
+      <p class="ac"><button id="id_btn_accueil" onclick= "fct_fetch_onload()">ACCUEIL</button>  </p>
+      <a class="ac" href="#category_2" title="visualisation des categories specifiques"  id="id_btn_categories"> CATEGORIES </a>
+    </div>
+    
+  <h1  class=titre_cat id="titre_cat1">LE FILM AVEC LE MEILLEUR SCORE </h1>
+  <div class="mf" id="f1"> 
+    <div id = "f2">  
+      <a class="titre_cat1" id="id_titre_cat1">titre</a>
+      <div id="category_1" class="category_1">
+        <i class="fa-solid fa-arrow-right"></i>
+        <p class="bouton_mf"><button id="id_btn_info" onclick= "fonction_fetch_modale(10,0)">INFO</button></p>
+        <p class="bouton_mf"><button id="id_btn_play" onclick= fonction_ouvert_page_html()>PLAY</button></p>
+      </div>
+    </div>
+    <div id="f3"> <a  class="photo_cat1" id="id_photo_Cat1" onclick="fonction_fetch_modale(10,0)">titre</a> </div>
+  </div>
+  
+  <div id=cat_2345 >
+    <h1 class=titre_cat id="titre_cat2">TOUTES CATEGORIE MEILLEURS SCORE</h1>
+      <div id="category_2" class="cat_2345" >
+        <p class="fg_cat2345" id="fg_cat2" onclick="fonction_page_previous_cat0(0)"> <img src="images/fleche_gauche.png" alt="fleche gauche" /></p>
+        <p class="img_cat2" id="img1_cat2" onclick="fonction_fetch_modale(0,0)"> <img src="images/img1.jpg" alt = "image film" /></p>
+        <p class="img_cat2" id="img2_cat2" onclick="fonction_fetch_modale(0,1)"> <img src="images/32.jpg" alt= "image film" /></p>
+        <p class="img_cat2" id="img3_cat2" onclick="fonction_fetch_modale(0,2)"> <img src="images/img4.jpg" alt = "image film" /></p>
+        <p class="img_cat2" id="img4_cat2" onclick="fonction_fetch_modale(0,3)"> <img src="images/img1.png" alt = "image film" /></p>
+        <p class="img_cat2" id="img5_cat2" onclick="fonction_fetch_modale(0,4)"> <img src="images/img2.png" alt = "image film" /></p>
+        <p class="img_cat2" id="img6_cat2" onclick="fonction_fetch_modale(0,5)"> <img src="images/32.jpg" alt = "image film" /></p>
+        <p class="img_cat2" id="img7_cat2" onclick="fonction_fetch_modale(0,6)"> <img src="images/32.jpg" alt = "image film" /></p>
+        <p class="fd_cat2345" id="fd_cat2" onclick="fonction_next_page_2(0)"> <img src="images/fleche_droite.png" alt="fleche droite" /></p>
+        <br>
+      </div>
+  </div>    
+          
+  <h1 class=titre_cat id="titre_cat3">CATEGORIE AVENTURE MEILLEURS SCORES</h1>
+      <div id="category_3" class="cat_2345">
+        <p class="fg_cat2345" id="fg_cat3" onclick="fonction_previous_page_2(1)"> <img src="images/fleche_gauche.png" alt = "fleche_gauche" /></p>
+          <p class="img_cat3" id="img1_cat3" onclick="fonction_fetch_modale(1,0)">image1 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img2_cat3" onclick="fonction_fetch_modale(1,1)">image2 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img3_cat3" onclick="fonction_fetch_modale(1,2)">image3 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img4_cat3" onclick="fonction_fetch_modale(1,3)">image4 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img5_cat3" onclick="fonction_fetch_modale(1,4)">image5 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img6_cat3" onclick="fonction_fetch_modale(1,5)">image6 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="img_cat3" id="img7_cat3" onclick="fonction_fetch_modale(1,6)">image7 <img src="images/img1.jpg" alt = "image film" /></p>
+          <p class="fd_cat2345" id="fd_cat3" onclick="fonction_next_page_2(1)"> <img src="images/fleche_droite.png" alt = "fleche droite" /></p>
+      </div>
+
+  <h1 class=titre_cat id="titre_cat4">CATEGORIE HISTOIRE MEILLEURS SCORES</h1>
+      <div id="category_4" class="cat_2345">
+        <a class="fg_cat2345" id="fg_cat4" onclick="fonction_previous_page_2(2)"> <img src="images/fleche_gauche.png" alt="Flèche gauche" /></a>
+        <a class="img_cat4" id="img1_cat4" onclick="fonction_fetch_modale(2,0)">image1 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img2_cat4" onclick="fonction_fetch_modale(2,1)">image2 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img3_cat4" onclick="fonction_fetch_modale(2,2)">image3 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img4_cat4" onclick="fonction_fetch_modale(2,3)">image4 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img5_cat4" onclick="fonction_fetch_modale(2,4)">image5 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img6_cat4" onclick="fonction_fetch_modale(2,5)">image6 <img src="images/img1.jpg" alt = "image film" /></a>
+        <a class="img_cat4" id="img7_cat4" onclick="fonction_fetch_modale(2,6)">image7 <img src="images/img1.jpg" alt = "image film" /></a>
+        <!-- <a class="img_cat4" id="img6_cat4" img src="images/img1.jpg" onclick="fonction_fetch_modale(2,5)"> imagexxxx W3C DE MERDE  /></a>-->
+        <a class="fd_cat2345" id="fd_cat4" onclick="fonction_next_page_2(2)"> <img src="images/fleche_droite.png" alt = "fleche droite" /></a>
+      </div>
+
+      <h1 class=titre_cat id="titre_cat5">CATEGORIE ANIMATION MEILLEURS SCORES</h1>
+      <div id="category_5" class="cat_2345">
+        <p class="fg_cat2345" id="fg_cat5" onclick="fonction_previous_page_2(3)"> <img src="images/fleche_gauche.png" alt="Flèche gauche" /></p>
+        <p class="img_cat5" id="img1_cat5" onclick="fonction_fetch_modale(3,0)">image1 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img2_cat5" onclick="fonction_fetch_modale(3,1)">image2 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img3_cat5" onclick="fonction_fetch_modale(3,2)">image3 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img4_cat5" onclick="fonction_fetch_modale(3,3)">image4 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img5_cat5" onclick="fonction_fetch_modale(3,4)">image5 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img6_cat5" onclick="fonction_fetch_modale(3,5)">image7 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="img_cat5" id="img7_cat5" onclick="fonction_fetch_modale(3,6)">image7 <img src="images/img1.jpg" alt="img1.jpg" /></p>
+        <p class="fd_cat2345" id="fd_cat5" onclick="fonction_next_page_2(3)"> <img src="images/fleche_droite.png" alt="fleche droite" /></p>
+      </div>  
+
+  <script src="script.js"></script>
+  <script src="fonctions_script.js"></script>
+  <script src="class_fetch.js"></script>
+  <script src="fonctions_fetch.js"></script>
+  <script  src="script_modal.js"></script>
+
+  <footer>
+      <!-- Placez ici le contenu du pied de page -->
+  </footer>
+  </body>
+</html>
