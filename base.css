@@ -119,45 +119,6 @@
   background-color: #ffffff;
 }
 
-/*
-.fg_cat2345, .fd_cat2345{
-  text-align: center;
-}
-
-#id-btn_test1, #id-btn_test2, #id-btn_test3{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border: 0px solid rgb(216, 8, 8);
-  width: auto;
-}
-
-
-#id_result_next, #id_result_test, #id_result_test2, #id_result_res, #id_result_next_page, #id_result_previous_page, #id_result_img {
-  text-align: center;
-  font-size: 24px;
-  border: 2px solid rgb(204, 236, 24);
-}
-
-#id_btn_fetch, #id_btn_fetch2, #id_test
-{ 
-  margin: auto;
-  margin-top: 35px;
-  margin-bottom: 5px;
-  display: block;
-}
-
-#category_5, #category_4, #category_3, #category_2 
-{
-  background: #7b38d8;
-}
-
-.img1_cat5{
-background-color: #7b38d8;
-background-image: 110px;
-font-size: 20px;
-}
-
 /*DEBUT MODAL ********************************************************/
 .modal-btn {
 padding: 10px 14px;

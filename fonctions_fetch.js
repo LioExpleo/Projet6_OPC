@@ -71,7 +71,7 @@ function fonction_fetch_1(url, index_cat, nombre_films) {
   
       class_meilleur_film = new ClassFilm;
       //traitement du meilleur film, memoriser toutes les donnees dans un fichier a part pour les ressortir meme en cas de changement de page
-      if (index_cat == 0 && index == 0 && run_cycle == 1){
+      if (index_cat == 0 && index == 0){// && run_cycle == 1){
         balise_dest_meilleur_film = "id_photo_Cat1"
         class_meilleur_film["id_film"] = liste_films[index_cat][index]["id_film"] ;
         class_meilleur_film["url_film"] = liste_films[index_cat][index]["url_film"]
@@ -98,19 +98,19 @@ function fonction_fetch_1(url, index_cat, nombre_films) {
 
       //ecrire une fonction pour extraire le numero de page et le mettre dans le titre, si plus de precedent, griser le bouton
       page_suiv = fonction_nbr_page(liste_page_next[0]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat2").innerText = ("<< Page precedente " + (page_prec) + "_______________TOUTES CATEGORIE_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat2").innerText = ("<< Page " + (page_prec) + "________TOUTES CATEGORIE________" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat2");
 
       page_suiv = fonction_nbr_page(liste_page_next[1]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat3").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE AVENTURES_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat3").innerText = ("<< Page " + (page_prec) + "________CATEGORIEx AVENTURES________" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat3");
 
       page_suiv = fonction_nbr_page(liste_page_next[2]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat4").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE HISTOIRE_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat4").innerText = ("<< Page " + (page_prec) + "________CATEGORIE HISTOIRE________" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat4");
 
       page_suiv = fonction_nbr_page(liste_page_next[3]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat5").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE ANIMATION_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat5").innerText = ("<< Page " + (page_prec) + "________CATEGORIE ANIMATION________" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat5");
       setTimeout(raz_fetch_en_cours,1);  
       document.getElementById('fg_cat2').setAttribute("onclick")
@@ -209,19 +209,19 @@ function fonction_fetch_1(url, index_cat, nombre_films) {
     }
       //Fonction pour extraire le numero de page et le mettre dans le titre, et griser la fleche previous si 1ere page affichee
       page_suiv = fonction_nbr_page(liste_page_next[0]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat2").innerText = ("<< Page precedente " + (page_prec) + "_______________TOUTES CATEGORIE_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat2").innerText = ("<< Page " + (page_prec) + "________TOUTES CATEGORIE_______" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat2");
 
       page_suiv = fonction_nbr_page(liste_page_next[1]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat3").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE AVENTURES_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat3").innerText = ("<< Page " + (page_prec) + "_______CATEGORIE AVENTURES_______" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat3");
       
       page_suiv = fonction_nbr_page(liste_page_next[2]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat4").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE HISTOIRE_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat4").innerText = ("<< Page " + (page_prec) + "____________CATEGORIE HISTOIRE_______" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat4");
 
       page_suiv = fonction_nbr_page(liste_page_next[3]); page_prec = page_suiv - 2;
-      document.getElementById("titre_cat5").innerText = ("<< Page precedente " + (page_prec) + "_______________CATEGORIE ANIMATION_______________" + " Page suivante >>" +(page_suiv));
+      document.getElementById("titre_cat5").innerText = ("<< Page " + (page_prec) + "_______CATEGORIE ANIMATION_______" + " Page " +(page_suiv) + ">>");
       grisag_flech(page_suiv,"fg_cat5");
 
       document.getElementById("m_title").innerText = (liste_films[0][0]["titre"] );
@@ -242,21 +242,23 @@ function fonction_fetch_1(url, index_cat, nombre_films) {
   }
   
   function fonction_page_previous_cat0(cat){
-    // si la page precedente est 1, il faut faire un fetch initial pour la categorie 0
+    // si la page precedente est 1, il faut faire un fetch initial pour la categorie 0, sinon on affiche les 7 films de chaque page
     page_previous = liste_page_previous[cat];
-    num_page_prec_cat0 = fonction_nbr_page(page_previous)
+    page_suiv = fonction_nbr_page(liste_page_next[cat]); page_prec = page_suiv - 2;
     
-    if (num_page_prec_cat0 == "1"){
+    if (page_prec == "1"){
         fonction_fetch_1(page_previous,cat,8);
+        document.getElementById("titre_cat2").innerText = ("<< Page " + (page_prec) + "_______page previous" + page_prec + "avec 8 films_______" + " Page " +(page_suiv) + ">>");
      }
-     if (num_page_prec_cat0 != "1"){
-      fonction_fetch_1(page_previous,cat,8);
+     if (page_prec != "1"){
+      fonction_fetch_2(page_previous,cat,7);
+      document.getElementById("titre_cat2").innerText = ("<< Page " + (page_prec) + "_______page previous" + page_prec + " avec 7 films_______" + " Page " +(page_suiv) + ">>");
    }
   }
 
   function fonction_previous_page_1(cat){
     page_previous = liste_page_previous[cat]
-    fonction_fetch_1(page_previous,cat,7);
+    fonction_fetch_1(page_previous,cat,8);
   }
 
     //fonction pour charger la page suivante avec l'index de la categorie pour aller chercher l'url de la page suivante dans la liste sauvegardee 

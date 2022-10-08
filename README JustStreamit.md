@@ -1,6 +1,6 @@
 # Application Web JustStreamIt - fonctionnement du site
 L’objectif est de récupérer les données des films depuis une API en local à l’aide de requêtes ajax et de les afficher sur une interface web.
-Il faudra filtrer les données en fonction de critères que sont les catégorie et le score Imdb. 
+Il faudra filtrer les données en fonction de critères que sont la catégorie et le score Imdb. 
 L'image du film est affichée dans la liste des films selon leurs scores. 
 
 L'interface comporte 4 catégories. 
@@ -61,4 +61,4 @@ Les étapes 1 à 6 ne sont requises que pout l'installation initiale. Pour les l
 ## Installation de l'application Web JustStreamIt
 L'application a été testée sous W3C, et ne présente pas d'erreur en ce qui concerne les fichier HTML et CSS.
 
-Une fois l'application récupérée sur github, et le serveur de l'API lancée, il suffit d'ouvrir le fichier index.html dans un navigateur de votre choix.
+Une fois l'application récupérée sur github, et le serveur de l'API lancé, il suffit d'ouvrir le fichier index.html dans un navigateur de votre choix.
